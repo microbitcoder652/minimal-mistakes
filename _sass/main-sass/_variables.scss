@@ -1,0 +1,102 @@
+$doc-font-size: 18px;
+$doc-font-size-medium: 21.6px;
+$doc-font-size-large: 25.2px;
+$doc-font-size-x-large: 28.8px;
+
+$paragraph-indent: false;
+$indent-var: 1.3em;
+
+$sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$sans-serif-narrow: $sans-serif;
+$serif: Georgia, Times, serif;
+$monospace: Monaco, Consolas, "Lucida Console", monospace;
+
+$global-font-family: $sans-serif;
+$header-font-family: $sans-serif;
+$caption-font-family: $serif;
+
+$type-size-1: 2.441em;
+$type-size-2: 1.953em;
+$type-size-3: 1.563em;
+$type-size-4: 1.25em;
+$type-size-5: 1em;
+$type-size-6: 0.75em;
+$type-size-7: 0.6875em;
+$type-size-8: 0.625em;
+
+$h-size-1: 1.563em;
+$h-size-2: 1.25em;
+$h-size-3: 1.125em;
+$h-size-4: 1.0625em;
+$h-size-5: 1.03125em;
+$h-size-6: 1em;
+
+$gray: #7a8288;
+$dark-gray: #3d4144;
+$darker-gray: #313437;
+$light-gray: #bdc1c4;
+$lighter-gray: #f2f3f4;
+
+$background-color: #252a34;
+$text-color: #eaeaea;
+$muted-text-color: #888;
+$border-color: #3b4049;
+$form-background-color: #1f232b;
+$footer-background-color: #181b21;
+
+$primary-color: #00adb5;
+$success-color: #39ff14;
+$warning-color: #ffea00;
+$danger-color: #ff073a;
+$info-color: #ff00ff;
+$focus-color: #ff00ff;
+$active-color: #fbf9f3;
+$code-background-color: #1f232b;
+$code-background-color-dark: #1c2027;
+
+$link-color: #8be1e4;
+$link-color-hover: #a4e8ea;
+$link-color-visited: #69b3b5;
+$masthead-link-color: #eaeaea;
+$masthead-link-color-hover: #bcbcbc;
+$navicon-link-color-hover: #181b21;
+
+$base00: #000000;
+$base01: #2e3c43;
+$base02: #314549;
+$base03: #546e7a;
+$base04: #b2ccd6;
+$base05: #00ffff;
+$base06: #eeffff;
+$base07: #ffffff;
+$base08: #ff073a;
+$base09: #f78c6c;
+$base0a: #ffea00;
+$base0b: #39ff14;
+$base0c: #89ddff;
+$base0d: #ff00ff;
+$base0e: #c792ea;
+$base0f: #ff5370;
+
+$small: 600px;
+$medium: 768px;
+$medium-wide: 900px;
+$large: 1024px;
+$x-large: 1280px;
+$max-width: $x-large;
+
+$right-sidebar-width-narrow: 200px;
+$right-sidebar-width: 300px;
+$right-sidebar-width-wide: 400px;
+
+$notice-background-mix: #9ccfd0;
+$code-notice-background-mix: #b65a65;
+
+$border-radius: 4px;
+$box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+$nav-height: 2.5em;
+$nav-toggle-height: 2.5rem;
+$navicon-width: 1.5rem;
+$navicon-height: 0.25rem;
+$global-transition: all 0.3s ease-in-out;
+$intro-transition: intro 0.4s both;

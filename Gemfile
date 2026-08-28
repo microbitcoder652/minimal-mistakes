@@ -1,2 +1,7 @@
 source "https://rubygems.org"
-gemspec
+
+gem "jekyll"
+gem "jekyll-include-cache"
+gem "kramdown-parser-gfm"
+gem "jekyll-sitemap"
+gem "jekyll-feed"

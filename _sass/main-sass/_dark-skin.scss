@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Dark skin
+   ========================================================================== */
+
+/* Colors */
+$background-color: #252a34;
+$text-color: #eaeaea;
+$primary-color: #00adb5;
+
+$border-color: #3b4049;
+$code-background-color: #1f232b;
+$code-background-color-dark: #1c2027;
+$form-background-color: #1f232b;
+$footer-background-color: #181b21;
+$link-color: #8be1e4;
+$link-color-hover: #a4e8ea;
+$link-color-visited: #69b3b5;
+
+$masthead-link-color: $text-color;
+$masthead-link-color-hover: #bcbcbc;
+$navicon-link-color-hover: #181b21;
+
+.author__urls.social-icons i,
+.author__urls.social-icons .svg-inline--fa,
+.page__footer-follow .social-icons i,
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
+}
+

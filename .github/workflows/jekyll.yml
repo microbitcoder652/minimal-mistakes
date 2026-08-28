@@ -1,0 +1,55 @@
+name: Aryas Coding World Jekyll & Minimal Mistakes
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby & Node.js
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4.8'
+          bundler-cache: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          bundle install
+          npm install -g terser
+
+      - name: Build site & minify JS
+        run: |
+          terser assets/js/main.js -o assets/js/main.min.js -c -m
+          bundle exec jekyll build
+          mkdir -p _site/assets/js
+          cp assets/js/main.min.js _site/assets/js/
+          ls -l
+          ls -R _site || echo "_site missing"
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./_site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+

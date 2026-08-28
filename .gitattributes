@@ -1,6 +1,9 @@
-assets/fonts/*                  linguist-vendored
+# Vendor assets (don’t count toward language stats)
 assets/js/main.min.js           linguist-vendored
 assets/js/plugins/*             linguist-vendored
 assets/js/vendor/*              linguist-vendored
-_sass/minimal-mistakes/vendor/* linguist-vendored
-*.md                            text
+_sass/main-sass/vendor/* linguist-vendored
+
+# Ruby build metadata (optional)
+Gemfile                         linguist-vendored
+Gemfile.lock                    linguist-vendored

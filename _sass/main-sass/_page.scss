@@ -1,0 +1,119 @@
+/* ==========================================================================
+   SINGLE PAGE
+   ========================================================================== */
+
+#main {
+  margin-inline: auto;
+  padding-inline: 1em;
+  animation: $intro-transition 0.15s ease-in-out;
+  max-width: 100%;
+
+  @include breakpoint($x-large) {
+    max-width: $max-width;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.initial-content,
+.search-content {
+  flex: 1 0 auto;
+}
+
+.page {
+  @include breakpoint($large) {
+    float: inline-end;
+    width: calc(100% - #{$right-sidebar-width-narrow});
+    padding-inline-end: $right-sidebar-width-narrow;
+  }
+
+  @include breakpoint($x-large) {
+    width: calc(100% - #{$right-sidebar-width});
+    padding-inline-end: $right-sidebar-width;
+  }
+
+  .page__inner-wrap {
+    margin-top: 1em;
+    width: 100%;
+    @include clearfix();
+  }
+}
+
+.page__title {
+  margin-top: 0;
+  line-height: 1;
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+  }
+}
+
+.page__lead {
+  font-family: $global-font-family;
+  font-size: $type-size-4;
+}
+
+.page__content {
+  h2 {
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid $border-color;
+  }
+
+  p {
+    margin: 0 0 $indent-var;
+  }
+
+  a:not(.btn):hover {
+    text-decoration: underline;
+
+    img {
+      box-shadow: 0 0 10px rgba(#000, 0.25);
+    }
+  }
+
+  :not(pre) > code {
+    padding: 0.1rem;
+    font-size: 0.8em;
+    background: $code-background-color;
+    border-radius: $border-radius;
+  }
+}
+
+/* ==========================================================================
+   Comments (Giscus)
+   ========================================================================== */
+
+.page__comments {
+  margin-inline: 0;
+  width: 100%;
+  @include clearfix();
+}
+
+.page__comments-title {
+  margin-top: 2rem;
+  margin-bottom: 10px;
+  padding-top: 2rem;
+  font-size: $type-size-6;
+  border-top: 1px solid $border-color;
+  text-transform: uppercase;
+}
+
+.giscus {
+  background-color: $background-color;
+  color: $text-color;
+
+  .giscus-comment {
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    padding: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  }
+}
+
+

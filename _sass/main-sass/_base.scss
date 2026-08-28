@@ -1,0 +1,118 @@
+/* ==========================================================================
+   NEON BASE ELEMENTS
+   ========================================================================== */
+
+html {
+  position: relative;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+  font-family: $global-font-family;
+  line-height: 1.6;
+  background-color: $background-color;
+
+  &.overflow--hidden {
+    overflow: hidden;
+  }
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin: 2em 0 0.5em;
+  line-height: 1.2;
+  font-family: $header-font-family;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.4);
+}
+
+h1 { font-size: $h-size-1; margin-top: 0; }
+h2 { font-size: $h-size-2; }
+h3 { font-size: $h-size-3; }
+h4 { font-size: $h-size-4; }
+h5 { font-size: $h-size-5; }
+h6 { font-size: $h-size-6; }
+
+p {
+  margin-bottom: 1.5em;
+}
+
+/* Links */
+a {
+  color: #0ff;
+  text-decoration: none;
+  transition: text-shadow 0.3s ease;
+
+  &:hover {
+    text-shadow: 0 0 5px #0ff;
+  }
+
+  &:visited {
+    color: $link-color-visited;
+  }
+}
+
+/* Code blocks */
+code, pre {
+  font-family: $monospace;
+  background-color: rgba(0, 255, 255, 0.05);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+pre {
+  overflow-x: auto;
+  margin-bottom: 1.5em;
+}
+
+/* Blockquotes */
+blockquote {
+  margin: 2em 0;
+  padding: 1em;
+  font-style: italic;
+  border-left: 4px solid $primary-color;
+  background-color: rgba(0, 255, 255, 0.03);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+
+  cite {
+    display: block;
+    margin-top: 0.5em;
+    font-style: normal;
+    font-size: $type-size-6;
+    opacity: 0.8;
+  }
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  border-radius: $border-radius;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 0 10px #0ff;
+  }
+}
+
+/* Lists */
+ul, ol {
+  margin-bottom: 1.5em;
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  border-top: 1px solid $border-color;
+  margin: 2em 0;
+}
+
