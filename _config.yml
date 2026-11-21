@@ -67,10 +67,12 @@ social:
 
 # Analytics
 analytics:
-  provider               : "google-gtag"
+  provider               : "cloudflare"
   google:
-    tracking_id          : "G-EC7H47YYYN"
-    anonymize_ip         : true
+    tracking_id          : 
+    anonymize_ip         : # true (default), false 
+  cloudflare:
+    token          : "62823da5bb9e45f7b35d815f16c7010e"
 
 
 # Site Author
