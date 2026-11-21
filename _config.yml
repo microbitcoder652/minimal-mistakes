@@ -68,7 +68,7 @@ social:
 # Analytics
 analytics:
   provider               : "google-gtag"
-  google-gtag:
+  google:
     tracking_id          : "G-EC7H47YYYN"
     anonymize_ip         : true
 
