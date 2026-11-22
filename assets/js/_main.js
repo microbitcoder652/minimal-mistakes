@@ -12,26 +12,6 @@ $(document).ready(function () {
     $(".author__urls-wrapper").find("button").toggleClass("open");
   });
 
-  // Close search screen with Esc key
-  $(document).keyup(function (e) {
-    if (e.keyCode === 27) {
-      if ($(".initial-content").hasClass("is--hidden")) {
-        $(".search-content").toggleClass("is--visible");
-        $(".initial-content").toggleClass("is--hidden");
-      }
-    }
-  });
-
-  // Search toggle
-  $(".search__toggle").on("click", function () {
-    $(".search-content").toggleClass("is--visible");
-    $(".initial-content").toggleClass("is--hidden");
-    // set focus on input
-    setTimeout(function () {
-      $(".search-content input").focus();
-    }, 400);
-  });
-
   // Smooth scrolling
   var scroll = new SmoothScroll('a[href*="#"]', {
     offset: 20,
@@ -39,48 +19,6 @@ $(document).ready(function () {
     speedAsDuration: true,
     durationMax: 500,
   });
-
-  // Gumshoe scroll spy init
-  if ($("nav.toc").length > 0) {
-    var spy = new Gumshoe("nav.toc a", {
-      // Active classes
-      navClass: "active", // applied to the nav list item
-      contentClass: "active", // applied to the content
-
-      // Nested navigation
-      nested: false, // if true, add classes to parents of active link
-      nestedClass: "active", // applied to the parent items
-
-      // Offset & reflow
-      offset: 20, // how far from the top of the page to activate a content area
-      reflow: true, // if true, listen for reflows
-
-      // Event support
-      events: true, // if true, emit custom events
-    });
-  }
-
-  // Auto scroll sticky ToC with content
-  const scrollTocToContent = function (event) {
-    var target = event.target;
-    var scrollOptions = { behavior: "auto", block: "nearest", inline: "start" };
-
-    var tocElement = document.querySelector("aside.sidebar__right.sticky");
-    if (!tocElement) return;
-    if (window.getComputedStyle(tocElement).position !== "sticky") return;
-
-    if (target.parentElement.classList.contains("toc__menu") && target == target.parentElement.firstElementChild) {
-      // Scroll to top instead
-      document.querySelector("nav.toc header").scrollIntoView(scrollOptions);
-    } else {
-      target.scrollIntoView(scrollOptions);
-    }
-  };
-
-  // Has issues on Firefox, whitelist Chrome for now
-  if (!!window.chrome) {
-    document.addEventListener("gumshoeActivate", scrollTocToContent);
-  }
 
   // add lightbox class to all image links
   $(
